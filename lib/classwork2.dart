@@ -2,15 +2,12 @@ import 'dart:io';
 
 void main() {
   print("Enter a character: ");
-  
-  // Read user input
+
   String? input = stdin.readLineSync();
   
   if (input != null && input.length == 1) {
-    // Check if the input is a single character
     String character = input.toLowerCase();
 
-    // Check if it's a letter
     if (RegExp(r'^[a-z]$').hasMatch(character)) {
       if ("aeiou".contains(character)) {
         print("$input is a vowel.");
